@@ -3,7 +3,7 @@ import renderWithRouter from '../renderWithRouter';
 
 import App from '../App';
 
-test('Verifica se componente App possui um conjunto fixo de links de navegação', () => {
+test('Verifica se a página "Home" possui um conjunto fixo de links de navegação', () => {
   renderWithRouter(<App />);
 
   const homeLink = screen.getByRole('link', { name: /home/i });
