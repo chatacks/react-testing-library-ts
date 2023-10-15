@@ -13,6 +13,4 @@ test('Verifica se componente App possui um conjunto fixo de links de navegação
   expect(homeLink).toBeInTheDocument();
   expect(aboutLink).toBeInTheDocument();
   expect(favoritePokemonLink).toBeInTheDocument();
-  // expect(aboutLink).toBeInTheDocument();
-  // expect(favoritePokemonLink).toBeInTheDocument();
 });
