@@ -43,7 +43,7 @@ test('Verifica se ao clicar no link "More Details" é feito o redirecionamento d
   const favorited = screen.getByRole('checkbox', { name: /pokémon favoritado/i });
 
   await user.click(favorited);
-  screen.debug();
+
   const imageFavorited = screen.getByAltText(`${name} is marked as favorite`);
 
   expect(headingPikachu).toBeInTheDocument();
