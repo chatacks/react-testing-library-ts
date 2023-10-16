@@ -5,7 +5,7 @@ import App from '../App';
 
 const pokemonTestId = 'pokemon-type-button';
 
-it('deve ter um heading h2 com o texto Encountered Pokémon', () => {
+test('Verifica se a página "Pokedex" deve ter um heading h2 com o texto Encountered Pokémon', () => {
   renderWithRouter(<App />);
 
   const heading = screen.getByRole('heading', { name: /Encountered Pokémon/i, level: 2 });
@@ -13,7 +13,7 @@ it('deve ter um heading h2 com o texto Encountered Pokémon', () => {
   expect(heading).toBeInTheDocument();
 });
 
-it('deve exibir o próximo Pokémon da lista quando o botão Próximo Pokémon é clicado', async () => {
+test('Verifica se a página "Pokedex" exibe o próximo Pokémon da lista quando o botão Próximo Pokémon é clicado', async () => {
   const { user } = renderWithRouter(<App />);
 
   const nextPokemonButton = screen.getByRole('button', { name: /próximo pokémon/i });
@@ -24,7 +24,7 @@ it('deve exibir o próximo Pokémon da lista quando o botão Próximo Pokémon �
   expect(pokemon2).toBeInTheDocument();
 });
 
-it('deve ter os botões de filtro', () => {
+test('Verifica se a página "Pokedex" tem os botões de filtro renderizados', () => {
   renderWithRouter(<App />);
 
   const pokemonButtons = screen.getAllByTestId(pokemonTestId);
@@ -34,7 +34,7 @@ it('deve ter os botões de filtro', () => {
   });
 });
 
-it('deve circular pelos Pokémon do tipo selecionado', async () => {
+test('Verifica se o botão clicado correspondem ao tipo do pokémon', async () => {
   const { user } = renderWithRouter(<App />);
 
   const buttonFire = screen.getAllByTestId(pokemonTestId)[1];
@@ -54,7 +54,7 @@ it('deve circular pelos Pokémon do tipo selecionado', async () => {
   expect(buttonFire).toHaveTextContent(/fire/i);
 });
 
-it('deve ter um botão para resetar o filtro', () => {
+test('Verifica se o botão "All" está renderizado', () => {
   renderWithRouter(<App />);
 
   const buttonAll = screen.getByRole('button', { name: /all/i });
@@ -62,7 +62,7 @@ it('deve ter um botão para resetar o filtro', () => {
   expect(buttonAll).toBeInTheDocument();
 });
 
-it('deve mostrar os Pokémon normalmente (sem filtros) quando o botão All for clicado', async () => {
+test('Verifica se quando o botão "All" é clicado, os filtros são retirados', async () => {
   const { user } = renderWithRouter(<App />);
 
   const buttonFire = screen.getAllByTestId(pokemonTestId)[1];
