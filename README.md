@@ -69,7 +69,3 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 - [Documentação do React](https://reactjs.org/)
 - [Documentação do React Router](https://reactrouter.com/)
 - [Documentação do TypeScript](https://www.typescriptlang.org/)
-
----
-
-Este README agora reflete o uso das bibliotecas React, React DOM, e React Router DOM no projeto.
